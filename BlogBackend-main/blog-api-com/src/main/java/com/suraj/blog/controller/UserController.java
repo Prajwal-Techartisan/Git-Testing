@@ -218,5 +218,48 @@ public class UserController {
 		return new ResponseEntity(new ApiResponse("User Deleted Successfully", true) , HttpStatus.OK);
 	}
 	
+	@PutMapping("/{userId}")
+	public ResponseEntity<UserDTO> updateUser(@Valid @RequestBody UserDTO userDTO, @PathVariable Integer userId){
+		
+		UserDTO updatedUser = this.userService.updateUser(userDTO, userId);
+		
+		return ResponseEntity.ok(updatedUser);
+	}
+	
+	
+	@DeleteMapping("/{userId}")
+	public ResponseEntity<ApiResponse> deleteUser(@PathVariable Integer userId){
+		this.userService.deleteUser(userId);
+		return new ResponseEntity(new ApiResponse("User Deleted Successfully", true) , HttpStatus.OK);
+	}
+	@PutMapping("/{userId}")
+	public ResponseEntity<UserDTO> updateUser(@Valid @RequestBody UserDTO userDTO, @PathVariable Integer userId){
+		
+		UserDTO updatedUser = this.userService.updateUser(userDTO, userId);
+		
+		return ResponseEntity.ok(updatedUser);
+	}
+	
+	
+	@DeleteMapping("/{userId}")
+	public ResponseEntity<ApiResponse> deleteUser(@PathVariable Integer userId){
+		this.userService.deleteUser(userId);
+		return new ResponseEntity(new ApiResponse("User Deleted Successfully", true) , HttpStatus.OK);
+	}
+	@PutMapping("/{userId}")
+	public ResponseEntity<UserDTO> updateUser(@Valid @RequestBody UserDTO userDTO, @PathVariable Integer userId){
+		
+		UserDTO updatedUser = this.userService.updateUser(userDTO, userId);
+		
+		return ResponseEntity.ok(updatedUser);
+	}
+	
+	
+	@DeleteMapping("/{userId}")
+	public ResponseEntity<ApiResponse> deleteUser(@PathVariable Integer userId){
+		this.userService.deleteUser(userId);
+		return new ResponseEntity(new ApiResponse("User Deleted Successfully", true) , HttpStatus.OK);
+	}
 	
 }
+//lots of changes made
