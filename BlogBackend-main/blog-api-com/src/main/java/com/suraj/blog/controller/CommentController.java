@@ -32,3 +32,10 @@ public class CommentController {
 		return new ResponseEntity<ApiResponse>(new ApiResponse("Comment Deleted Succesfully!", true), HttpStatus.OK);
 	}
 }
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.suraj.blog.payload.ApiResponse;
+import com.suraj.blog.payload.CommentDto;
+import com.suraj.blog.service.CommentService;
