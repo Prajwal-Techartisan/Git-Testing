@@ -49,6 +49,13 @@ public class CommentController {
 		this.commentService.deleteComment(commentId);
 		return new ResponseEntity<ApiResponse>(new ApiResponse("Comment Deleted Succesfully!", true), HttpStatus.OK);
 	}
+
+	//below changes made by prajwal
+	@getMapping("/comments/{consId}")
+	public ResponseEntity<ApiResponse> deleteComment(@PathVariable Integer commentId){
+		this.commentService.deleteComment(commentId);
+		return new ResponseEntity<ApiResponse>(new ApiResponse("Comment Deleted Succesfully!", true), HttpStatus.OK);
+	}
 }
 
 import org.springframework.web.bind.annotation.RequestBody;
