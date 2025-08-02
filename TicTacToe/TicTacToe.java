@@ -13,6 +13,9 @@ public class TicTacToe{
                 board[row][col] = ' ';
             }
         }
+        {
+            
+        }
     }
 
     public static void printBoard(char[][] board){
