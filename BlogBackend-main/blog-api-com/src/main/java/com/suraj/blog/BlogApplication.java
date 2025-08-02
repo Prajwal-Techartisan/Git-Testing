@@ -20,4 +20,5 @@ public class BlogApplication {
 	}
 
 	System.out.println("Change 3");
+	System.out.println("Change 4");
 }
