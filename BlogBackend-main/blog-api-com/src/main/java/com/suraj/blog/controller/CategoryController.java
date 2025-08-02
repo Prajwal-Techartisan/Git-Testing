@@ -58,5 +58,10 @@ public class CategoryController {
 		return new ResponseEntity<List<CategoryDTO>>(dtos, HttpStatus.OK);
 	}
 	
+	@GetMapping("/")
+	public ResponseEntity<List<CategoryDTO>> getAllNumbers(){
+		List<CategoryDTO> dtos = this.categoryService.getAllCategory();
+		return new ResponseEntity<List<CategoryDTO>>(dtos, HttpStatus.OK);
+	}
 
 }

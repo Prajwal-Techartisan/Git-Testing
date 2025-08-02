@@ -31,4 +31,10 @@ public class CommentController {
 		this.commentService.deleteComment(commentId);
 		return new ResponseEntity<ApiResponse>(new ApiResponse("Comment Deleted Succesfully!", true), HttpStatus.OK);
 	}
+
+	@DeleteMapping("/comments/{commentId}")
+	public ResponseEntity<ApiResponse> deleteAccount(@PathVariable Integer commentId){
+		this.commentService.deleteComment(commentId);
+		return new ResponseEntity<ApiResponse>(new ApiResponse("Comment Deleted Succesfully!", true), HttpStatus.OK);
+	}
 }

@@ -113,6 +113,21 @@ public class PostContoller {
 		PostDto updatedPost = this.postService.updatePost(postDto, postId);
 		return new ResponseEntity<PostDto>(updatedPost, HttpStatus.OK);
 	}
+
+	// 
+	@PostMapping("/post/image/upload/{postId}")
+	public ResponseEntity<PostDto> uploadPhoto(
+								@RequestParam("image" )MultipartFile image , 
+								@PathVariable Integer postId
+								) throws IOException{
+									
+		PostDto postDto = this.postService.getPostById(postId);
+		String fileName = this.fileService.uploadImage(path, image);
+		
+		postDto.setImageName(fileName);
+		PostDto updatedPost = this.postService.updatePost(postDto, postId);
+		return new ResponseEntity<PostDto>(updatedPost, HttpStatus.OK);
+	}
 	
 	
 	//method to serve file
