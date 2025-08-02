@@ -18,4 +18,6 @@ public class BlogApplication {
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
 	}
+
+	System.out.println("Change 3");
 }
