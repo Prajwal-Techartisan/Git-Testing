@@ -156,5 +156,29 @@ public class PostContoller {
 		StreamUtils.copy(resourse, response.getOutputStream());
 	}
 	
-	
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}
+
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}
 }
