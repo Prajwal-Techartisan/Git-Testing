@@ -12,6 +12,7 @@ public class BlogApplication {
 		SpringApplication.run(BlogApplication.class, args);
 	}
 
+	System.out.println("Stash Change 1");
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
