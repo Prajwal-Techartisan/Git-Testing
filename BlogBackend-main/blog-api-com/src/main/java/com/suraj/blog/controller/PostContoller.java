@@ -162,7 +162,7 @@ public class PostContoller {
 	}
 	//post image upload
 	@PostMapping("/post/image/upload/{postId}")
-	public ResponseEntity<PostDto> uploadPostImage(
+	public ResponseEntity<PostDto> uploadnotPostImage(
 								@RequestParam("image" )MultipartFile image , 
 								@PathVariable Integer postId
 								) throws IOException{
