@@ -97,6 +97,36 @@ public class PostContoller {
 		PostDto post = this.postService.getPostById(postId);
 		return new ResponseEntity<PostDto>(post, HttpStatus.OK);
 	}
+	@GetMapping("/posts/{postId}")
+	public ResponseEntity<PostDto> getPostById(@PathVariable Integer postId) {
+		PostDto post = this.postService.getPostById(postId);
+		return new ResponseEntity<PostDto>(post, HttpStatus.OK);
+	}
+	@GetMapping("/posts/{postId}")
+	public ResponseEntity<PostDto> getPostById(@PathVariable Integer postId) {
+		PostDto post = this.postService.getPostById(postId);
+		return new ResponseEntity<PostDto>(post, HttpStatus.OK);
+	}
+	@GetSpringBoot("/posts/{postId}")
+	public ResponseEntity<PostDto> getPostById(@PathVariable Integer postId) {
+		PostDto post = this.postService.getPostById(postId);
+		return new ResponseEntity<PostDto>(post, HttpStatus.OK);
+	}
+	@GetSpringBoot("/posts/{postId}")
+	public ResponseEntity<PostDto> getPostById(@PathVariable Integer postId) {
+		PostDto post = this.postService.getPostById(postId);
+		return new ResponseEntity<PostDto>(post, HttpStatus.OK);
+	}
+	@GetSpringBoot("/posts/{postId}")
+	public ResponseEntity<PostDto> getPostById(@PathVariable Integer postId) {
+		PostDto post = this.postService.getPostById(postId);
+		return new ResponseEntity<PostDto>(post, HttpStatus.OK);
+	}
+	@GetSpringBoot("/posts/{postId}")
+	public ResponseEntity<PostDto> getPostById(@PathVariable Integer postId) {
+		PostDto post = this.postService.getPostById(postId);
+		return new ResponseEntity<PostDto>(post, HttpStatus.OK);
+	}
 
 	@GetMapping("/posts")
 	public ResponseEntity<List<PostDto>> getAllPosts(
@@ -144,11 +174,122 @@ public class PostContoller {
 		PostDto updatedPost = this.postService.updatePost(postDto, postId);
 		return new ResponseEntity<PostDto>(updatedPost, HttpStatus.OK);
 	}
+
+	// 
+	@PostMapping("/post/image/upload/{postId}")
+	public ResponseEntity<PostDto> uploadPhoto(
+								@RequestParam("image" )MultipartFile image , 
+								@PathVariable Integer postId
+								) throws IOException{
+									
+		PostDto postDto = this.postService.getPostById(postId);
+		String fileName = this.fileService.uploadImage(path, image);
+		
+		postDto.setImageName(fileName);
+		PostDto updatedPost = this.postService.updatePost(postDto, postId);
+		return new ResponseEntity<PostDto>(updatedPost, HttpStatus.OK);
+	}
 	
 	
 	//method to serve file
 	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void uploadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
 	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void downloadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void uploadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void uploadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void uploadImage(
+			@PathVariable("imageName")String imageName,
+			HttpServletResponse response) throws IOException{
+		InputStream resourse = this.fileService.getResource(path, imageName);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+		StreamUtils.copy(resourse, response.getOutputStream());
+	}	//method to serve file
+	@GetMapping(value = "post/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void uploadImage(
 			@PathVariable("imageName")String imageName,
 			HttpServletResponse response) throws IOException{
 		InputStream resourse = this.fileService.getResource(path, imageName);
