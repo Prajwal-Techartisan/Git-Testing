@@ -79,6 +79,19 @@ public class PostContoller {
 		return new ResponseEntity<List<PostDto>>(posts, HttpStatus.OK);
 	}
 
+	@GetMapping("/user/{userId}/add")
+	public ResponseEntity<List<PostDto>> getPostByUser(@PathVariable Integer userId) {
+		List<PostDto> posts = this.postService.getPostByUser(userId);
+		return new ResponseEntity<List<PostDto>>(posts, HttpStatus.OK);
+	}
+
+	@GetMapping("/category/{categoryId}/add")
+	public ResponseEntity<List<PostDto>> getPostByCategory(@PathVariable Integer categoryId) {
+		List<PostDto> posts = this.postService.getPostByCategory(categoryId);
+		return new ResponseEntity<List<PostDto>>(posts, HttpStatus.OK);
+	}
+
+
 	@GetMapping("/posts/{postId}")
 	public ResponseEntity<PostDto> getPostById(@PathVariable Integer postId) {
 		PostDto post = this.postService.getPostById(postId);
@@ -94,6 +107,7 @@ public class PostContoller {
 		List<PostDto> posts = this.postService.getAllPost(pageNumber, pageSize, sortBy, sortDir);
 		return new ResponseEntity<>(posts, HttpStatus.OK);
 	}
+	//below changes made by prajwal
 
 	@DeleteMapping("/posts/{postId}")
 	public ResponseEntity<ApiResponse> deletePost(@PathVariable Integer postId) {
