@@ -9,10 +9,11 @@ import org.springframework.context.annotation.Bean;
 public class BlogApplication {
 
 	public static void main(String[] args) {
+		System.out.println("Stash Change 1");
 		SpringApplication.run(BlogApplication.class, args);
 	}
 
-	System.out.println("Stash Change 1");
+	System.out.println("Stash Change 2");
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
