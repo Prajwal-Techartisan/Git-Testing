@@ -9,6 +9,9 @@ public class Helpers {
             System.out.println(content);
         } catch (IOException e) {
             System.err.println("Unable to open " + filePath);
+            System.out.println("hello");
+            System.out.println("yee");
+            System.out.println("hii");
         }
     }
 
