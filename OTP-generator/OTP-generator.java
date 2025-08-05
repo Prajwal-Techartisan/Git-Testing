@@ -13,7 +13,7 @@ class Main {
 	{ 
 		System.out.println("Generating password using random() : "); 
 		System.out.print("Your new password is : "); 
- 
+		System.out.println();
 		String Capital_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
 		String Small_letters = "abcdefghijklmnopqrstuvwxyz"; 
 		String numbers = "0123456789"; 

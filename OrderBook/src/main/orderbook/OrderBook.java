@@ -24,6 +24,9 @@ final class Orderbook {
                 double randomPrice = 90.0 + random.nextInt(1001) / 100.0;
                 addOrder(random.nextInt(100) + 1, randomPrice, "BUY");
                 addOrder(random.nextInt(100) + 1, randomPrice, "BUY");
+                System.out.println("hello");
+                System.out.println("print");
+                System.out.println("Hiii");
             }
             
             for (int i = 0; i < 10; i++) {
